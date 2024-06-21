@@ -1,0 +1,43 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control">
+      <input
+        class="input"
+        type="email"
+        placeholder="your email"
+        [(ngModel)]="credentials.email"
+        name="email"
+        #email
+      />
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control">
+      <input
+        class="input"
+        type="password"
+        placeholder="your password"
+        [(ngModel)]="credentials.password"
+        name="password"
+        #password
+      />
+    </div>
+  </div>
+  <div class="field is-grouped">
+    <div class="control">
+      <button type="submit" class="button is-link">Submit</button>
+    </div>
+    <div class="control">
+      <button
+        type="button"
+        (click)="credentials = { email: '', password: '' }"
+        class="button is-link is-light"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</form>
+<h1>{{ credentials | json }}</h1>

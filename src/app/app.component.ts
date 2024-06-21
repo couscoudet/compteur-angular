@@ -24,4 +24,7 @@ export class AppComponent implements OnInit {
   }
   disableButtonAdd: boolean = false;
   disableButtonRemove: boolean = false;
+  // clog(e: KeyboardEvent) {
+  //   console.log(e);
+  // }
 }
